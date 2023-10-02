@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import static java.lang.Math.*;
 
 public class MainClass {
 	public static void main (String[] args) {
@@ -26,14 +27,14 @@ public class MainClass {
 		for (int i=0; i < c.size()-1; i++) {
 			for (int j=0; j < x.size()-1; j++) {
 				if (c.get(i) == 17) {
-					z[i][j] = Math.sin(Math.cos(Math.pow(x.get(j), x.get(j))));
+					z[i][j] = sin(cos(pow(x.get(j), x.get(j))));
 
 				}
 				else if (Arrays.asList(checklist).contains(c.get(i))) {
-					z[i][j] = Math.log(Math.pow(Math.E, Math.atan(Math.sin(x.get(j)))));
+					z[i][j] = log(pow(E, atan(sin(x.get(j)))));
 				}
 				else {
-					z[i][j] = Math.cos(Math.atan(0.5 * Math.sin(x.get(j))));
+					z[i][j] = cos(atan(0.5 * sin(x.get(j))));
 				}
 			}
 		}
@@ -49,8 +50,6 @@ public class MainClass {
 
 			}
 			System.out.println();
-
 		}
 	}
-
 }
